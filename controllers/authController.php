@@ -2,11 +2,11 @@
 
 session_start();
 
-if (isset($_POST['username'])){
+if (isset($_POST['submit'])){
     include_once('/model/connect.php');
 
-    $username = mysqli_real_escape_string($mysqli, $_POST['username']);
-    $password = mysqli_real_escape_string($mysqli, $_POST['password']);
+    $username = real_escape_string($_POST['username']);
+    $password = real_escape_string($_POST['password']);
 
     if (empty($username) || empty($password)) {
 
