@@ -7,7 +7,7 @@ include_once('settings.php');
 try {
     $conn = new mysqli($hostname, $username, $password, $dbname);
 } catch (Exception $e){
-    die();
+    die("failed to connect to DB: " . $conn->connect_error);
 }
 
 
