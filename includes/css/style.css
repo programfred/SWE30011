@@ -1,0 +1,131 @@
+/*filename: [your name]
+author: [Mir Aun Ali Naqvi]
+created: [18th March 2021]
+last modified: [26th March 2021]
+description: [html files it refers to (if known)]*/
+
+h1 {font-family: Arial, sans-serif ; font-size: 30px; font-variant: small-caps;}
+
+h3 {color:purple; font-size: 20px; font-weight:bold;}
+
+h4 {color:red; font-size: 20px; font-weight:bold;}
+
+h5 {font-family: Arial, sans-serif ; font-size: 30px; font-variant: small-caps;}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {background-color: #4CAF50;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+/* 
+body:hover {
+	border-left-style: solid; border-left-color: darkgreen
+} */
+	
+p {
+  color: black;
+  font-size: 15px;}
+  
+label {font-size: 15px;
+	   color: black;}
+	   
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
+  overflow: hidden;
+  background-color: lightgreen;
+}
+
+li {float: left;
+padding: 1px;}
+
+li a {
+  display: inline-block;
+  text-decoration: none; padding:0.2em 0.6em;}
+
+li a:hover {
+    background-color: lightblue;}
+	
+aside {font-style: italic;
+	width: 25%;
+	border-color: green;
+	font-size: 25px;
+	color: green;}
+
+aside:hover {visibility: hidden;}
+
+div {
+  margin: 2rem 0;}
+
+.bgimg {
+    background-image: url('../images/food.png');
+}
+
+@media screen and (max-width: 600px) {
+  button[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}	 
+
+#images {background: url(../image/flight.png);
+		background-repeat: no-repeat;
+		background-size: cover;}
+
+#trip {background: url(../image/world.png);
+		background-repeat: no-repeat;
+background-size: cover;}
+		
+.bgimg {background: url(../styles/images/food.png);}
+
+footer {clear:both; 
+		border-top:4px double darkgrey;	
+		border-color: darkgreen;}
+
+footer p {display:inline-block; width:33%; float:left;}
+
+footer p:first-child {float:left;}
+
+footer p:nth-child(2) {text-align:center;}
+
+footer p:last-child {float:right; text-align:center;}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 1px;
+  }
+.column img {width:80%}
+
+.row {clear: both;
+  display: table;
+}
+
+table, th, td {
+  border: 1px solid black;}
+
+th {background-color: #b5651d;}
+
+td {background-color: lightyellow;}
+
+dt {font-weight: bold;}
+
+
+.menu {float: left; 
+list-style: none; 
+margin-right: 6px; 
+border: 2px solid;}
+
+.text {color: green;
+  text-shadow: 4px 4px 8px #800080;}
+

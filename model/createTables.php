@@ -8,15 +8,15 @@ $tblMember = "CREATE TABLE IF NOT EXISTS tblMember (
         lastName VARCHAR(30),
         email VARCHAR(50),
         mobile VARCHAR(10),
-        address VARCHAR(40),
+        streetAddress VARCHAR(40),
         suburb VARCHAR(30),
         postcode VARCHAR(4)
         )";
 
 $tblProduct = "CREATE TABLE IF NOT EXISTS tblProduct (
         productCode INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(40),
-        description VARCHAR(150),
+        productName VARCHAR(40),
+        productDescription VARCHAR(150),
         category VARCHAR(20),
         price DECIMAL(5,2)
         )";
