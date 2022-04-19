@@ -3,37 +3,37 @@
 session_start();
 
 if (isset($_POST['submit'])){
-    include_once('/model/connect.php');
+    include_once('../model/connect.php');
 
-    $username = real_escape_string($_POST['username']);
-    $password = real_escape_string($_POST['password']);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     if (empty($username) || empty($password)) {
 
         // flag login error and return
         $_SESSION['loginError'] = 1;
-        header("Location: /views/login.php");
+        header("Location: /login.php");
 
     } else {
         // hardcoded login details
         if ($username == 'admin' && $password == 'admin'){
             
             // reset login error flag
-            $_SESSION['loginError'] = 0;
+            unset($_SESSION['loginError']);
             
             // create user session which defines whether the user is logged in
             $_SESSION['username'] = $username;
+            header("Location: /index.php");
             exit();
 
         } else {
 
             $_SESSION['loginError'] = 1;
-            header("Location: /views/login.php");
+            header("Location: /login.php");
             exit();
         }
     }
 } else {
-    echo "bad";
     header("Location: /login.php");
     exit();
 }
