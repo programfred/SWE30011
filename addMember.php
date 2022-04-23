@@ -11,6 +11,7 @@
 
 <body>
 
+	<a href="/controllers/logout.php">Logout</a>
 	<h1>Welcome to Goto GRO Software</h1>
 	<aside>A program eases everyone's life</aside>
 
@@ -43,7 +44,8 @@
 	</form>
 
 	<div id="button">
-		<a href="index.html" class="previous">Back</a>
+		<a href="index.php" class="previous">Home</a>
+		<!not sure if we need a back button>
 		<a href="product.html" class="next">Next</a>
 	</div>
 </body>
