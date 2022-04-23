@@ -21,7 +21,7 @@ session_start();
 	Hello, <?php echo $_SESSION['username']; ?>
  	</br>
 
- 	<form action="search.php" method="post">
+ 	<form action="controllers/searchMember.php" method="post">
 	<input id="search" name="search" type="text" placeholder="Search member here">
 	<input id="submit" type="submit" value="Search">
 	</form>

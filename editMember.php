@@ -20,39 +20,28 @@ session_start();
 	<a href="/controllers/logout.php">Logout</a>
 	<h1>Member search result</h1>
 
-	<br>
-	Hello, <?php echo $_SESSION['username']; ?>
-	</br>
-	
-	<!make here display the searched member name>
-	<br>
-	search result for, <?php echo $_SESSION['username']; ?>
-	</br>
+	<form method="post" action="controllers/updateMember.php">
+		<fieldset>
+			<h3>Personal Details</h3>
+			<label for="First_name">Member Id: </label><input type="text" name="memberID" value=" <?php echo $_SESSION['memberID']; ?>" readonly><br><br>
 
-	<! change the place holder echo to the editing member details> 
-	<fieldset>
-		<h3>Personal Details</h3>
-		<label for="First_name">Member Id:</label><?php echo $_SESSION['username']; ?><br><br>
-		<label for="First_name">First name:</label>
-		<input type="text" id="First_name" name="firstname" placeholder="<?php echo $_SESSION['username']; ?>" required="required" /><br><br>
-		<label for="Last_name">Last name:</label>
-		<input type="text" id="Last_name" name="lastname" placeholder="<?php echo $_SESSION['username']; ?>" required="required" /><br><br>
-		<label for="Email">Email Address:</label>
-		<input type="email" id="Email" name="email" placeholder="example@email.com" required="required" /><br><br>
-		<label for="Phone">Phone number:</label>
-		<input type="tel" id="Phone" name="mobile" placeholder="0400 123 456" pattern="\d{10}" required><br><br>
-		<label for="address">Address:</label>
-		<input type="text" id="address" name="streetAddress" placeholder="123 Main St" required="required" /><br><br>
-		<label for="suburb">Suburb:</label>
-		<input type="text" id="suburb" name="suburb" placeholder="Suburb" maxlength="30" size="20"><br><br>
-		<label for="post_code">Post Code:</label>
-		<input type="text" id="post_code" name="postcode" placeholder="Postcode" maxlength="10" size="10"><br><br>
-		<hr>
+			<label for="First_name">First name: </label><input type="text" name="firstname" value=" <?php echo $_SESSION['memFirstName']; ?>" ><br><br>
 
-		<form method="post" action="editConformation.php">
+			<label for="Last_name">Last name: </label><input type="text"  name="lastname" value=" <?php echo $_SESSION['memLastName']; ?>"><br><br>
+
+			<label for="Email">Email Address: </label><input type="text" name="email" value=" <?php echo $_SESSION['memEmail']; ?>" size="40"><br><br>
+
+			<label for="Phone">Phone number: </label><input type="text" name="mobile" value=" <?php echo $_SESSION['memMobile']; ?>" ><br><br>
+
+			<label for="address">Address: </label><input type="text" name="streetAddress" value=" <?php echo $_SESSION['memAddress']; ?>"><br><br>
+
+			<label for="suburb">Suburb: </label><input type="text" name="suburb" value=" <?php echo $_SESSION['memSuburb']; ?>"><br><br>
+
+			<label for="post_code">Postcode: </label><input type="text" name="postcode" value=" <?php echo $_SESSION['memPostcode']; ?>"><br><br>
+			<hr>
 			<button type="submit" class="registerbtn">Save</button>
-		</form>
-	</fieldset>
+		</fieldset>
+	</form>
 
 
 	<a href="index.php">Home</a>
