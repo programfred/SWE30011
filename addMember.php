@@ -5,20 +5,32 @@
   <meta name="keywords" content="HTML5, tags" />
   <meta name="author" content="Mir Aun Ali Naqvi"  />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="css.css" rel="stylesheet">
+  <link href="addmember.css" rel="stylesheet">
 <title>Enquire</title>
 </head>
 
 <body>
 
-	<a href="/controllers/logout.php">Logout</a>
-	<h1>Welcome to Goto GRO Software</h1>
-	<aside>A program eases everyone's life</aside>
-
-	<form method="post" action="/controllers/InsertMember.php">
-
-		<section id="images">
-			<fieldset>
+<header id="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            </div>
+        </div>
+		<div>
+            <a id="h1">ADD MEMBER</a>
+			<a class="active" href="index.php" id="link">INDEX</a> 	
+        </div>
+		<div class="container"><img id="joshdun" src="joshdun.png" alt='joshdun'>
+    </nav>
+</header>
+	<div class="background">
+			<div class="shape"></div>
+			<div class="shape"></div>
+	</div>
+	<form method="post" action="/controllers/InsertMember.php" class="formfull">
 				<h3>Personal Details</h3>
 				<label for="First_name">First name:</label>
 				<input type="text" id="First_name" name="firstname" required="required" /><br><br>
@@ -38,16 +50,11 @@
 				<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
 				<button type="submit" class="registerbtn">Register Member</button>
-
-			</fieldset>
-			</section>
 	</form>
-
-	<div id="button">
-		<a href="index.php" class="previous">Home</a>
-		<!not sure if we need a back button>
-		<a href="product.html" class="next">Next</a>
-	</div>
+	<div id="copyright">
+	<p id="footertop">© Copyright 2022</p>
+	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>
+</div>
 </body>
 </html>
 

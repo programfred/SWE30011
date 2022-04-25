@@ -1,0 +1,110 @@
+.nav-item, .nav-item:link {
+    display: inline;
+    position: relative;
+    left: 800px;
+    top: 50;
+    font-family: "SFMono-Regular", monospace;
+    text-decoration:wavy;
+}
+#footerbottom {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 635px;
+    text-align: center;
+    font-size: 12px;
+}
+#footertop {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 645px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-ieam:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus,
+.navbar.active .nav-link:link {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+
+#text{
+
+    height: 25px;
+    border-radius: 50px;
+    padding: 4px;
+    border: solid thin #aaa;
+}
+
+#button{
+    padding: 10px;
+    width: 100px;
+    color: black;
+    background-color: hotpink;
+    border: black;
+}
+
+#loginbox{
+    background-color: lightblue;
+    margin: auto;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 150px;
+    font-family: "SFMono-Regular", monospace;
+}
+
+#logo{
+    width: 100px;
+    height: auto;
+    left: 100px;
+    position: relative;
+    top: 20px;
+    filter: invert(1);
+}
+
+#guy{
+    width: auto;
+    height: 635px;
+    position: relative;
+    opacity: 5%;
+    left: 956px;
+    filter: grayscale(100%);
+}
