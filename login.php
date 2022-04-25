@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link href="css.css" rel="stylesheet">
 	<link href="login.css" rel="stylesheet">
+    <title>LOGIN</title>
 </head>
 <body>
 

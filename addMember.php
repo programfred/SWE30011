@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="css.css" rel="stylesheet">
   <link href="addmember.css" rel="stylesheet">
-<title>Enquire</title>
+<title>ADD MEMBER</title>
 </head>
 
 <body>

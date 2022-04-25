@@ -16,6 +16,7 @@ session_start();
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
   	<link href="css.css" rel="stylesheet">
   	<link href="editmember.css" rel="stylesheet">
+	  <title>EDIT MEMBER</title>
 </head>
 <body>
 
