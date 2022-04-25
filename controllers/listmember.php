@@ -9,7 +9,8 @@ $result = $conn->query($sqlStr);
 
 while($row = $result->fetch_assoc()) {
     echo "<li>". "memberId: " . $row["memberID"]. $row["firstName"]. " " . $row["lastName"]. $row["email"]. $row["mobile"].
-    "<a href=./delmember.php?id=".$row["memberID"].">delete</a>".
+    "<a href=./delmember.php?id=".$row["memberID"].">delete</a>"."    ".
+    "<a href=/editMember.php?id=".$row["memberID"].">edit</a>".
      "</li>";
   }
     ?>
