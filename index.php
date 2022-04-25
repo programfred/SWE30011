@@ -27,6 +27,6 @@ session_start();
 	</form>
 
 	<a href="addMember.php">Add a new member</a>
-
+	<a href="controllers/listMember.php">list member</a>
 </body>
 </html>
