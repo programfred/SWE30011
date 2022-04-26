@@ -4,9 +4,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #080710;
-}
 .background{
     width: 430px;
     height: 520px;
@@ -107,7 +104,7 @@ button{
 }
 
 body {
-    min-height: 230vh;
+    min-height: 210vh;
     background-image: linear-gradient(135deg, #181818 0%, #4c4c4c 100%);
 }
 
@@ -154,7 +151,7 @@ body {
 
 #joshdun{
     right: 305px;
-    bottom: -821px;
+    bottom: -807px;
     position: absolute;
     opacity: 5%;
     width: 200px;
