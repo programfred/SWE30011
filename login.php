@@ -6,46 +6,45 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GotoGro-Login</title>
+	<title>Login</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="css.css" rel="stylesheet">
+	<link href="login.css" rel="stylesheet">
+    <title>LOGIN</title>
 </head>
 <body>
 
-	<style type="text/css">
-		#text{
+<header id="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="formfull">
+	<div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="post" action="controllers/authController.php">
+        <h3>Login Here</h3>
+		<?php if(isset($_SESSION['loginError'])){ echo "<p>Invalid username and password.</p>"; } ?>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" id="username" name="username">
 
-			height: 25px;
-			border-radius: 50px;
-			padding: 4px;
-			border: solid thin #aaa;
-		}
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password">
 
-		#button{
-			padding: 10px;
-			width: 100px;
-			color: black;
-			background-color: hotpink;
-			border: black;
-		}
+        <button type="submit" name="submit">Log In</button>
+    </form>
+</div>
+<div id="copyright">
+	<p id="footertop">© Copyright 2022</p>
+	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>
+</div>
 
-		#box{
-			background-color: lightblue;
-			margin: auto;
-			width: 300px;
-			padding: 30px;
-			border-radius: 10px;
-		}
-	</style>
+<div class="guy"><img id="guy" src="guy.png" alt='guy'>
 
-	<div id="box">
-		
-		<form method="post" action="/controllers/authController.php">
-			<div style="font-size: 20px;margin: 10px;color: black;">Login</div>
-			<?php if(isset($_SESSION['loginError'])){ echo "<p>Invalid username and password.</p>"; } ?>
-			<input id="text" type="text" name="username"><br><br>
-			<input id="text" type="password" name="password"><br><br>
-
-			<button id="button" type="submit" name="submit">Login</button><br><br>
-		</form>
-	</div>
 </body>
 </html>

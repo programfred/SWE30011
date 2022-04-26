@@ -48,8 +48,8 @@ session_start();
 
 
 	<a href="index.php">Home</a>
-	<a href="editMember.php?id=<?php echo $_SESSION['memberID']  ?> ">Edit member</a>
-	<a href="controllers/delMember.php?id=<?php echo $_SESSION['memberID']  ?>">Delete member</a>
+	<a href="editMember.php">Edit member</a>
+	<a href="deleteMember.php">Delete member</a>
 
 </body>
 </html>
