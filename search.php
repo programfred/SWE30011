@@ -13,18 +13,33 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GotoGro Member</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  	<link href="css.css" rel="stylesheet">
+  	<link href="search.css" rel="stylesheet">
+	  <title>SEARCH</title>
 </head>
 <body>
 
-	<a href="/controllers/logout.php">Logout</a>
-	<h1>Member search result</h1>
-
-	<p>search result for member ID: <?php echo $_SESSION['memberID']; ?></p>
-
+<a id="logout" href="/controllers/logout.php">LOG OUT</a>
+	<nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            </div>
+        </div>
+		<div>
+            <a id="h1">SEARCH</a>
+			<a class="active" href="index.php" id="link">HOME</a> 	
+			<a href="index.php" id="back">BACK</a>
+        </div>
+	<div class="background">
+			<div class="shape"></div>
+			<div class="shape"></div>
+	</div>
+	<form>
 	<fieldset>
-		<h3>Personal Details</h3>
-		<label for="First_name">Member Id: </label><input type="text" value="<?php echo $_SESSION['memberID']; ?>" disabled><br><br>
+		<h3>Member Search</h3>
+		<h4>Search Result for Member ID: <?php echo $_SESSION['memberID']; ?></h4>
+		<label for="First_name">Member ID: </label><input type="text" value="<?php echo $_SESSION['memberID']; ?>" disabled><br><br>
 
 		<label for="First_name">First name: </label><input type="text" value="<?php echo $_SESSION['memFirstName']; ?>" disabled><br><br>
 
@@ -42,14 +57,14 @@ session_start();
 
 		<hr>
 		<form method="post" action="sales.php">
-			<button type="submit" class="registerbtn">Add Sales</button>
+			<button type="submit" class="registerbtn">Search</button>
 		</form>
 	</fieldset>
+</form>
 
-
-	<a href="index.php">Home</a>
-	<a href="editMember.php">Edit member</a>
-	<a href="deleteMember.php">Delete member</a>
+<div id="copyright">
+	<p id="footertop">© Copyright 2022</p>
+	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>
 
 </body>
 </html>

@@ -42,9 +42,10 @@ session_start();
  	
 	<div id="searchform">
 		<form action="controllers/searchMember.php" method="post">
-		<input id="search" name="search" type="text" placeholder="Search member here">
-		<input id="submit" type="submit" value="Search">
+			<input id="search" name="search" type="text" placeholder="Search member here">
+			<input id="submit" type="submit" value="Search">
 		</form>
+
 		<div class="background">
 			<div class="shape"></div>
 			<div class="shape"></div>
