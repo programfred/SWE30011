@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 	if(empty($_SESSION['username'])){
 		header("Location: /login.php");
 		exit();
@@ -34,9 +33,9 @@ session_start();
     </nav>
 </header>
 	<! make it desplay the full member name>
-	<h2 id="h2">ARE YOU SURE YOU WANT TO DELETE <?php echo $_SESSION['username'];?></h2>
+	<h2 id="h2">ARE YOU SURE YOU WANT TO DELETE <?php echo $_SESSION['username'];?>?</h2>
 
-	<form method="post" action="deleteMemberConformation.php">
+	<form method="post" action="/controllers/delmember.php?id=<?php echo $_SESSION['memberID']; ?>" >
 		<button type="submit" id="confirm">Confirm</button>
 	</form>
 	<form method="post" action="search.php">

@@ -57,7 +57,8 @@ session_start();
 
 		<hr>
 		<form method="post" action="sales.php">
-			<button type="submit" class="registerbtn">Search</button>
+			<a id="deletemember" href="deleteMember.php">Delete Member</a>
+			<a id="editmember" href="editMember.php">Edit Member</a>
 		</form>
 	</fieldset>
 </form>

@@ -54,6 +54,7 @@ session_start();
 			<label for="post_code">Postcode: </label><input type="text" name="postcode" value="<?php echo $_SESSION['memPostcode']; ?>"><br><br>
 			<hr>
 			<button type="submit" class="registerbtn">Save</button>
+			<a id="cancel" href="search.php">Cancel</a>
 		</fieldset>
 	</form>
 
