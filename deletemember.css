@@ -1,0 +1,256 @@
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 901;
+}
+.background2{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 901;
+}
+.background .shape{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -170px;
+    top: 925px;
+    z-index: 901;
+}
+.shape:last-child{
+    background: linear-gradient(
+        #dc2fff,
+        #f019d0
+    );
+    left: 500px;
+    top: 1130px;
+    z-index: 900;
+}
+
+#confirm{
+    font-family: 'Poppins',sans-serif;
+    color: #2a2a2a;
+    top: 250px;
+    width: 25%;
+    left: 280px;
+    align-items: c;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+}
+
+#delete{
+        font-family: 'Poppins',sans-serif;
+        color: #2a2a2a;
+        top: 250px;
+        width: 25%;
+        right: 20%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+    }
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 95%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+#addmember{
+    font-family: 'Poppins',sans-serif;
+    color: #2a2a2a;
+    top: 750px;
+    width: 50%;
+    left: -25px;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+}
+
+#listmember{
+    font-family: 'Poppins',sans-serif;
+    color: #2a2a2a;
+    top: 750px;
+    width: 50%;
+    right: -25px;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    min-height: 97vh;
+    background-image: linear-gradient(135deg, #181818 0%, #4c4c4c 100%);
+}
+
+#h1{
+    top: 46px;
+    left: 630px;
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    font-size: 22px;
+}
+
+#h2{
+    top: 100px;
+    left: 530px;
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+#link{
+    top: 46px;
+    left: 1200px;
+    position:fixed;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 10%;
+    z-index: 910;
+}
+
+#back{
+    top: 46px;
+    left: 1270px;
+position: fixed;
+font-family: 'Poppins',sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 10%;
+}
+
+#logo{
+    top: 28px;
+    left: 108px;
+    position: fixed;
+    z-index: 910;
+    width: 100px;
+    filter: invert(1);
+}
+
+#logout{
+    top: 46px;
+    left: 1335px;
+position: fixed;
+font-family: 'Poppins',sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 10%;
+z-index: 910;
+}
+
+#footerbottom {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 570px;
+    text-align: center;
+    font-size: 12px;
+}
+#footertop {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 580px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#image{
+    position: fixed;
+    height: 437px;
+    width: auto;
+    left: -505px;
+}
+
+#line1{
+    position: fixed;
+    top: 450px;
+    left: 143px;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+}
+
+#line2{
+    position: fixed;
+    top: 468px;
+    left: 55px;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+}
+
+#searchform{
+    position: fixed;
+    top: -240px;
+}
+
+#submit{
+    width: 590px;
+}

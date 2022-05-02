@@ -13,17 +13,31 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GotoGro Member</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  	<link href="css.css" rel="stylesheet">
+  	<link href="editmember.css" rel="stylesheet">
+	  <title>EDIT MEMBER</title>
 </head>
 <body>
 
-	<a href="/controllers/logout.php">Logout</a>
-	<h1>Member search result</h1>
-
+	<a id="logout" href="/controllers/logout.php">LOG OUT</a>
+	<nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            </div>
+        </div>
+		<div>
+            <a id="h1">EDIT MEMBER RECORDS</a>
+			<a class="active" href="index.php" id="link">HOME</a> 	
+        </div>
+	<div class="background">
+			<div class="shape"></div>
+			<div class="shape"></div>
+	</div>
 	<form method="post" action="controllers/updateMember.php">
 		<fieldset>
 			<h3>Personal Details</h3>
-			<label for="First_name">Member Id: </label><input type="text" name="memberID" value="<?php echo $_SESSION['memberID']; ?>" readonly><br><br>
+			<label for="First_name">Member ID: </label><input type="text" name="memberID" value="<?php echo $_SESSION['memberID']; ?>" readonly><br><br>
 
 			<label for="First_name">First name: </label><input type="text" name="firstname" value="<?php echo $_SESSION['memFirstName']; ?>" ><br><br>
 
@@ -40,12 +54,15 @@ session_start();
 			<label for="post_code">Postcode: </label><input type="text" name="postcode" value="<?php echo $_SESSION['memPostcode']; ?>"><br><br>
 			<hr>
 			<button type="submit" class="registerbtn">Save</button>
+			<a id="cancel" href="search.php">Cancel</a>
 		</fieldset>
 	</form>
 
+	<a href="search.php" id="back">BACK</a>
 
-	<a href="index.php">Home</a>
-	<a href="search.php">Back</a>
-
+	<div id="copyright">
+	<p id="footertop">© Copyright 2022</p>
+	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>
+</div>
 </body>
 </html>

@@ -1,0 +1,236 @@
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 901;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -200px;
+    top: -40px;
+    z-index: 901;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #dc2fff,
+        #f019d0
+    );
+    right: -200px;
+    bottom: -1130px;
+    z-index: 900;
+}
+.formfull {
+    position: relative;
+    top: 700px;
+    }
+form{
+    height: 1440px;
+    width: 600px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 900px;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    z-index: 902;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 95%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    min-height: 252vh;
+    background-image: linear-gradient(135deg, #181818 0%, #4c4c4c 100%);
+}
+
+#addmemform{
+    z-index: 950;
+}
+
+#h1{
+    top: 40px;
+    left: 665px;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    font-size: 22px;
+}
+
+h4{
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+#link{
+    top: 46px;
+    left: 1200px;
+    position:fixed;
+font-family: 'Poppins',sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 10%;
+z-index: 910;
+}
+
+#back{
+    top: 46px;
+    left: 1270px;
+position: fixed;
+font-family: 'Poppins',sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 10%;
+}
+
+#logout{
+    top: 46px;
+    left: 1335px;
+position: fixed;
+font-family: 'Poppins',sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 10%;
+}
+
+#footerbottom {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 1700px;
+    text-align: center;
+    font-size: 12px;
+}
+#footertop {
+    font-family: "SFMono-Regular", monospace;
+    color: #fff;
+    position: relative;
+    top: 1710px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#joshdun{
+    right: 305px;
+    bottom: -821px;
+    position: absolute;
+    opacity: 5%;
+    width: 200px;
+    height: auto;
+    z-index: 950;
+}
+
+#logo{
+    top: 28px;
+    left: 108px;
+    position: fixed;
+    z-index: 910;
+    width: 100px;
+    filter: invert(1);
+}
+
+#editmember{
+    font-family: 'Poppins',sans-serif;
+    color: #2a2a2a;
+    top: 1450px;
+    width: 85.4%;
+    left: 49px;
+    align-items: c;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+}
+
+#deletemember{
+    font-family: 'Poppins',sans-serif;
+    color: #2a2a2a;
+    top: 1350px;
+    width: 85.4%;
+    left: 49px;
+    align-items: c;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+}
