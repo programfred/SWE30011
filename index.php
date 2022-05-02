@@ -13,13 +13,13 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link href="css.css" rel="stylesheet">
-	<link href="index.css" rel="stylesheet">
+	<link href="includes/css/css.css" rel="stylesheet">
+	<link href="includes/css/index.css" rel="stylesheet">
 </head>
 <body>
 
 <a id="logout" href="/controllers/logout.php">LOG OUT</a>
-<div class="container"><img id="logo" src="logo.png" alt='logo'>
+<div class="container"><img id="logo" src="includes/images/logo.png" alt='logo'>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
             </div>
         </div>
@@ -38,7 +38,7 @@ session_start();
 					Please select one of the following options
 				</div>
 	</div>
-	<div class="container"><img id="image" src="indeximage.png" alt='image'></div>
+	<div class="container"><img id="image" src="includes/images/indeximage.png" alt='image'></div>
  	
 	<div id="searchform">
 		<form action="controllers/searchMember.php" method="post">

@@ -14,15 +14,15 @@ session_start();
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-  	<link href="css.css" rel="stylesheet">
-  	<link href="search.css" rel="stylesheet">
+  	<link href="includes/css/css.css" rel="stylesheet">
+  	<link href="includes/css/search.css" rel="stylesheet">
 	  <title>SEARCH</title>
 </head>
 <body>
 
 <a id="logout" href="/controllers/logout.php">LOG OUT</a>
 	<nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+        <div class="container"><img id="logo" src="includes/images/logo.png" alt='logo'>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
             </div>
         </div>

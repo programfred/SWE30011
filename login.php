@@ -8,15 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link href="css.css" rel="stylesheet">
-	<link href="login.css" rel="stylesheet">
+	<link href="includes/css/css.css" rel="stylesheet">
+	<link href="includes/css/login.css" rel="stylesheet">
     <title>LOGIN</title>
 </head>
 <body>
 
 <header id="header">
     <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+        <div class="container"><img id="logo" src="includes/images/logo.png" alt='logo'>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
             </div>
         </div>

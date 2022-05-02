@@ -6,8 +6,8 @@
   <meta name="author" content="Mir Aun Ali Naqvi"  />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="css.css" rel="stylesheet">
-  <link href="addmember.css" rel="stylesheet">
+  <link href="includes/css/css.css" rel="stylesheet">
+  <link href="includes/css/addmember.css" rel="stylesheet">
 <title>ADD MEMBER</title>
 </head>
 
@@ -15,7 +15,7 @@
 
 <header id="header">
     <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+        <div class="container"><img id="logo" src="includes/images/logo.png" alt='logo'>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
             </div>
         </div>
@@ -25,7 +25,7 @@
 			<a href="search.php" id="back">BACK</a>
 			<a id="logout" href="/controllers/logout.php">LOG OUT</a>
         </div>
-		<div class="container"><img id="joshdun" src="joshdun.png" alt='joshdun'>
+		<div class="container"><img id="joshdun" src="includes/images/joshdun.png" alt='joshdun'>
     </nav>
 </header>
 	<div class="background">
