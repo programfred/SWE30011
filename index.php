@@ -12,7 +12,7 @@ session_start();
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href="includes/images/favicon.ico">
 	<link href="includes/css/css.css" rel="stylesheet">
 	<link href="includes/css/index.css" rel="stylesheet">
 </head>

@@ -5,7 +5,7 @@
   <meta name="keywords" content="HTML5, tags" />
   <meta name="author" content="Mir Aun Ali Naqvi"  />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="includes/images/favicon.ico">
   <link href="includes/css/css.css" rel="stylesheet">
   <link href="includes/css/addmember.css" rel="stylesheet">
 <title>ADD MEMBER</title>
