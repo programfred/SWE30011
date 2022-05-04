@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="includes/images/favicon.ico">
 	<link href="includes/css/css.css" rel="stylesheet">
 	<link href="includes/css/login.css" rel="stylesheet">
     <title>LOGIN</title>
