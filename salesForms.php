@@ -55,33 +55,7 @@
 				<input type="number" id="quantity" name="quantity" min="1" max="999"><br>
 				<label for="quantity">Butter quantity:</label>
 				<input type="number" id="quantity" name="quantity" min="1" max="999"><br>
-				<br><br><br>
-				<label for="salestarget">Sales target ($)</label>
-					<select id="salestarget" required="" class="custom-select">
-					  <option value="5000">$5,000</option>
-					  <option value="10000">$10,000</option>
-					  <option value="15000">$15,000</option>
-					  <option value="20000">$20,000</option>
-					  <option value="25000">$25,000</option>
-					  <option value="30000">$30,000</option>
-					  <option value="35000">$35,000</option>
-					  <option value="40000">$40,000</option>
-					  <option value="45000">$45,000</option>
-					  <option value="50000">$50,000</option>
-					  <option value="55000">$55,000</option>
-					  <option value="60000">$60,000</option>
-					  <option value="65000">$65,000</option>
-					  <option value="70000">$70,000</option>
-					  <option value="75000">$75,000</option>
-					  <option value="80000">$80,000</option>
-					  <option value="85000">$85,000</option>
-					  <option value="90000">$90,000</option>
-					  <option value="95000">$95,000</option>
-					  <option value="100000">$100,000</option>
-					</select>
-				<label for="salesresult">Sales result ($)</label>
-				<input type="number" id="salesresult" name="salesresult" required="" class="form-control" />
-
+				<br><br>
 				<hr>
 				<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
