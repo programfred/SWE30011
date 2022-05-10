@@ -66,7 +66,11 @@ session_start();
 	}
 
 	function topProducts(){
-		console.log("c");
+		fetch('controllers/AJAX/getTopSalesProducts.php').then(response => response.json())
+		.then(data => {
+		createTable(data, "3");
+
+		});
 	}
 
 	function stockOrderList(){
