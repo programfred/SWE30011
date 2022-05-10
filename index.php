@@ -54,6 +54,8 @@ session_start();
 	<div>
 		<a id="addmember" href="addMember.php">ADD MEMBER</a>
 		<a id="listmember" href="controllers/listMember.php">LIST MEMBERS</a>
+		<a id="salesform" href="salesform.php">ADD SALES</a>
+		<a id="reports" href="reports.php">REPORTS</a>
 	</div>
 
 	<div id="copyright">
