@@ -37,19 +37,10 @@ session_start();
 			<div class="shape"></div>
 	</div>
 	<div>
-		<form method="post" action="reports.php">
-
-   			<input type="submit" value="Weekly Sales Report" /> 
-			
-   			<input type="submit" value="Member Report" /> 
-
-   			<input type="button" value="Top Product Report" /> 
-
-   			<input type="button" value="Stock Order List" /> 
-
-		</form>
-		
-
+		<button id="weekSales">Weekly Sales</button>
+		<button id="memberReport">Member Report</button>
+		<button id="topProduct">Top Product Report</button>
+		<button id="StockOrderList">Stock Order List</button>
 	</div>
 
 
