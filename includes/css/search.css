@@ -43,7 +43,7 @@
     top: 700px;
     }
 form{
-    height: 1440px;
+    height: 1400px;
     width: 600px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -200,7 +200,7 @@ letter-spacing: 10%;
 #editmember{
     font-family: 'Poppins',sans-serif;
     color: #2a2a2a;
-    top: 1450px;
+    top: 1325px;
     width: 85.4%;
     left: 49px;
     align-items: c;
@@ -219,7 +219,7 @@ letter-spacing: 10%;
 #deletemember{
     font-family: 'Poppins',sans-serif;
     color: #2a2a2a;
-    top: 1375px;
+    top: 1400px;
     width: 85.4%;
     left: 49px;
     align-items: c;
@@ -235,21 +235,3 @@ letter-spacing: 10%;
     text-decoration: none;
 }
 
-#salesform{
-    font-family: 'Poppins',sans-serif;
-    color: #2a2a2a;
-    top: 1300px;
-    width: 85.4%;
-    left: 49px;
-    align-items: c;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    position: fixed;
-    text-align: center;
-    text-decoration: none;
-}
