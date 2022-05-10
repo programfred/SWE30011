@@ -52,7 +52,7 @@ $result = $conn->query($sqlStr);
                 <td id="names"><?php echo  $row["lastName"]; ?></td>
                 <td id="names"><?php echo  $row["email"]; ?></td>
                 <td id="names"><?php echo  $row["mobile"]; ?></td>
-                <td> <a id="button" href=./delmember.php?id=".$row["memberID"].">DELETE</a></td>
+                <td> <a id="button" href=./delmember.php?id="<?php echo $row["memberID"] ?>">DELETE</a></td>
             </tr>
             <?php   } ?>
         </table>
