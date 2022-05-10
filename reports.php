@@ -54,7 +54,7 @@ session_start();
 </body>
 <script>
 	function weekSales(){
-		fetch('controllers/AJAX/getWeeklySales.php').then(response => response.json())
+		fetch('controllers/AJAX/getTopSalesProducts.php').then(response => response.json())
 		.then(data => {
 		createTable(data, "1");
 
