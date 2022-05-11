@@ -85,9 +85,7 @@ session_start();
 
 		//Get the count of columns.
 		var columnCount = Object.keys(json[0]).length;
-
-		console.log(Object.keys(json[3]))
-
+		
 		//Add the header row.
 		var row = table.insertRow(-1);
 		for (var i = 0; i < columnCount; i++) {
