@@ -81,11 +81,10 @@ session_start();
 
 	function createTable(json, tableId){
 		var table = document.createElement("TABLE");
-		table.border = "1";
 
 		//Get the count of columns.
 		var columnCount = Object.keys(json[0]).length;
-		
+
 		//Add the header row.
 		var row = table.insertRow(-1);
 		for (var i = 0; i < columnCount; i++) {
