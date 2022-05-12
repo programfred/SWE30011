@@ -11,19 +11,44 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
-  	<link href="css.css" rel="stylesheet">
-  	<link href="search.css" rel="stylesheet">
-	<title>REPORTS</title>
-
+<meta name="keywords" content="HTML5, tags" />
+  <meta name="author" content="Mir Aun Ali Naqvi"  />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="includes/images/favicon.ico">
+  <link href="/includes/css/css.css" rel="stylesheet">
+  <link href="/includes/css/reports.css" rel="stylesheet">
+  <title>REPORTS</title>
+<style>
+	table{
+    text-align: center;
+    border-spacing: 15px;
+    table-layout: fixed;
+    height: auto;
+    width: 875px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 675px;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    z-index: 902;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+</style>
 
 </head>
 <body>
 	<a id="logout" href="/controllers/logout.php">LOG OUT</a>
 	<nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><img id="logo" src="logo.png" alt='logo'>
+	<div class="container"><img id="logo" src="/includes/images/logo.png" alt='logo'>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
             </div>
         </div>
@@ -32,9 +57,7 @@ session_start();
 			<a class="active" href="index.php" id="link">HOME</a> 	
 			<a href="index.php" id="back">BACK</a>
         </div>
-	<div class="background">
-			<div class="shape"></div>
-			<div class="shape"></div>
+
 	</div>
 	<div>
 		<button id="weekSales" onclick="weekSales()">Weekly Sales</button>
@@ -54,6 +77,7 @@ session_start();
 </body>
 <script>
 	function weekSales(){
+		deleteTables()
 		fetch('controllers/AJAX/getWeeklySales.php').then(response => response.json())
 		.then(data => {
 		createTable(data, "1");
@@ -66,6 +90,7 @@ session_start();
 	}
 
 	function topProducts(){
+		deleteTables()
 		fetch('controllers/AJAX/getTopSalesProducts.php').then(response => response.json())
 		.then(data => {
 		createTable(data, "3");
@@ -77,13 +102,20 @@ session_start();
 		console.log("d");
 	}
 
-
+	function deleteTables(){
+        var t = document.querySelector("table");
+        if (t){
+            t.parentElement.removeChild(t);
+        }
+    }
 
 	function createTable(json, tableId){
 		var table = document.createElement("TABLE");
 
 		//Get the count of columns.
 		var columnCount = Object.keys(json[0]).length;
+
+		console.log(Object.keys(json[3]))
 
 		//Add the header row.
 		var row = table.insertRow(-1);

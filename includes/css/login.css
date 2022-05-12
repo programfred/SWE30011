@@ -153,3 +153,7 @@ body {
     text-align: center;
     font-size: 12px;
 }
+
+#invalid{
+    color: #a80000;
+}
