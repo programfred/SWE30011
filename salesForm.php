@@ -57,30 +57,30 @@
 			var count = document.createElement("input");
 			count.setAttribute('id',"count");
 			count.setAttribute('name', "count");
-			count.setAttribute('value', json.length);
+			count.setAttribute('value', "");
 			count.setAttribute('hidden', 'hidden');
 			document.getElementById('productInputs').appendChild(count);
 		});
 
-		function onSubmitForm() {
-			var elements = document.querySelectorAll("#salesForm input[type=number]")
-
-			var values = document.createElement("input");
-			values.setAttribute('id',"values");
-			values.setAttribute('name', "values[]");
-			count.setAttribute('hidden', 'hidden');
-			document.getElementById('productInputs').appendChild(values);
-
-			var array = [];
-			elements.forEach(el => {
-				if (el.value != ''){
-					array.push(el.id)
-					array.push(el.value)
-				}
-			})
-
-			values.setAttribute('value', array);
-		}
+		// function onSubmitForm() {
+		// 	var elements = document.querySelectorAll("#salesForm input[type=number]")
+        //
+		// 	var values = document.createElement("input");
+		// 	values.setAttribute('id',"values");
+		// 	values.setAttribute('name', "values[]");
+		// 	count.setAttribute('hidden', 'hidden');
+		// 	document.getElementById('productInputs').appendChild(values);
+        //
+		// 	var array = [];
+		// 	elements.forEach(el => {
+		// 		if (el.value != ''){
+		// 			array.push(el.id)
+		// 			array.push(el.value)
+		// 		}
+		// 	})
+        //
+		// 	values.setAttribute('value', array);
+		// }
 	</script>
 	<form method="post" id="salesForm" action="/controllers/InsertSales.php" class="formfull" onsubmit="onSubmitForm()">
 				<h3>Sales Form</h3>
