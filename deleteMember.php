@@ -33,15 +33,22 @@ session_start();
     </nav>
 </header>
 	<! make it desplay the full member name>
-	<h2 id="h2">ARE YOU SURE YOU WANT TO DELETE <?php echo $_SESSION['username'];?>?</h2>
+	<h2 id="h2">ARE YOU SURE YOU WANT TO DELETE <?php echo "MEMBER ID " . $_SESSION["memberID"] ." " .$_SESSION['memFirstName']. " " .$_SESSION['memLastName']."?<br>";?></h2>
 
 	<form method="post" action="/controllers/delmember.php?id=<?php echo $_SESSION['memberID']; ?>" >
-		<button type="submit" id="confirm">Confirm</button>
+		<button type="submit" id="confirm" onclick="myFunction()">Confirm</button>
+
+		<script>
+		function myFunction() 
+		{
+  			alert("Member Deleted!");
+		}
+		</script>
+
 	</form>
 	<form method="post" action="search.php">
 		<button type="submit" id="delete">Cancel</button><br></br>
 	</form>
-
 	<div id="copyright">
 	<p id="footertop">© Copyright 2022</p>
 	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>

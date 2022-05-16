@@ -27,14 +27,32 @@ $updateMemberQuery = "UPDATE tblMember
 $result = $conn->query($updateMemberQuery);
 
 // check if inserted successfully
+// if (!$result)
+// {
+//     echo "update in member table failed!" . $conn->error;
+// }
+// else
+// {
+//     // success
+//     echo "successfully updated member";
+// }
+
 if (!$result)
 {
-    echo "update in member table failed!" . $conn->error;
+    
+    echo "<script>
+    window.location.href='../index.php';
+    alert('error editing a member!').conn->error;
+    </script>";
+
 }
 else
 {
     // success
-    echo "successfully updated member";
+    echo "<script>
+    window.location.href='../index.php';
+    alert('Member Updated!');
+    </script>";
 }
 
 // close DB connection

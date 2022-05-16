@@ -39,13 +39,13 @@ session_start();
 			<h3>Personal Details</h3>
 			<label for="First_name">Member ID: </label><input type="text" name="memberID" value="<?php echo $_SESSION['memberID']; ?>" readonly><br><br>
 
-			<label for="First_name">First name: </label><input type="text" name="firstname" value="<?php echo $_SESSION['memFirstName']; ?>" ><br><br>
+			<label for="First_name">First name: </label><input type="text" name="firstname" value="<?php echo $_SESSION['memFirstName']; ?>" required="required" ><br><br>
 
-			<label for="Last_name">Last name: </label><input type="text"  name="lastname" value="<?php echo $_SESSION['memLastName']; ?>"><br><br>
+			<label for="Last_name">Last name: </label><input type="text"  name="lastname" value="<?php echo $_SESSION['memLastName']; ?>" required="required"><br><br>
 
-			<label for="Email">Email Address: </label><input type="text" name="email" value="<?php echo $_SESSION['memEmail']; ?>" size="40"><br><br>
+			<label for="Email">Email Address: </label><input type="text" name="email" value="<?php echo $_SESSION['memEmail']; ?>" size="40" required="required"><br><br>
 
-			<label for="Phone">Phone number: </label><input type="text" name="mobile" value="<?php echo $_SESSION['memMobile']; ?>" ><br><br>
+			<label for="Phone">Phone number: </label><input type="text" name="mobile" value="<?php echo $_SESSION['memMobile']; ?>" pattern="\d{10}" required><br><br>
 
 			<label for="address">Address: </label><input type="text" name="streetAddress" value="<?php echo $_SESSION['memAddress']; ?>"><br><br>
 

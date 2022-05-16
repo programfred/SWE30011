@@ -29,7 +29,7 @@
     </div>
     <form method="post" action="controllers/authController.php">
         <h3>Login Here</h3>
-		<div id="invalid"><?php if(isset($_SESSION['loginError'])){ echo "<p>Invalid username and password.</p>"; } ?></div>
+		<div id="invalid"><?php if(isset($_SESSION['loginError'])){ echo '<span style="color:#FF4500;text-align:center;">Invalid Username/Password. Try Again!</span>'; } ?></div>
         <label for="username">Username</label>
         <input type="text" placeholder="Username" id="username" name="username">
 
