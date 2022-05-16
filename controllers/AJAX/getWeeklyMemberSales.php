@@ -1,13 +1,13 @@
 <?php
 include '../../model/connect.php';
 
-$sql = mysqli_query($conn, "SELECT tblMember.memberID,tblMember.firstName,tblMember.lastName,tblMember.email,tblOrderLine.productCode,tblProduct.productName,SUM(tblOrderLine.quantity)  as 'TotalSaleQuantity' 
+$sql = mysqli_query($conn, "SELECT tblMember.memberID,tblMember.firstName,tblMember.lastName,tblMember.email,tblProduct.productName,SUM(tblOrderLine.quantity)  as 'TotalSaleQuantity' 
 FROM tblOrderLine 
   LEFT JOIN tblProduct on tblOrderLine.productCode = tblProduct.productCode
   LEFT JOIN tblOrder on tblOrder.orderID = tblOrderLine.orderID    
   LEFT JOIN tblMember on tblMember.memberID = tblOrder.memberID                                                                                                           
-WHERE DATE(tblOrder.orderDate) > (NOW() - INTERVAL 7 DAY)
-                                  GROUP BY tblOrderLine.productCode ORDER BY SUM(tblOrderLine.quantity)  DESC
+WHERE DATE(tblOrder.orderDate) > (NOW() - INTERVAL 7 DAY) AND tblOrderLine.quantity > 0
+                                  GROUP BY tblOrder.memberID ORDER BY SUM(tblOrderLine.quantity)  DESC
                                   ");
 
 $rows = array();
