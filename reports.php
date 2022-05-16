@@ -26,9 +26,9 @@ session_start();
     height: auto;
     width: 875px;
     background-color: rgba(255,255,255,0.13);
-    position: absolute;
+    position: relative;
     transform: translate(-50%,-50%);
-    top: 675px;
+    top: 750px;
     left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -59,6 +59,7 @@ session_start();
         </div>
 
 	</div>
+
 	<div>
 		<button id="weekSales" onclick="weekSales()">Weekly Sales</button>
 		<div id="1"></div>
@@ -71,6 +72,8 @@ session_start();
 	</div>
 
 
+
+
 	<div id="copyright">
 	<p id="footertop">© Copyright 2022</p>
 	<p id="footerbottom">All Rights Reserved. Powered by the best team in SWE30011.</p>
@@ -80,26 +83,36 @@ session_start();
 		deleteTables()
 		fetch('controllers/AJAX/getWeeklySales.php').then(response => response.json())
 		.then(data => {
-		createTable(data, "1");
-
+			createTable(data, "1");
+			download_table_as_csv("1");
 		});
 	}
 
 	function memberReport(){
-		console.log("b");
+		deleteTables()
+		fetch('controllers/AJAX/getWeeklyMemberSales.php').then(response => response.json())
+		.then(data => {
+			createTable(data, "2");
+			download_table_as_csv("2");
+		});
 	}
 
 	function topProducts(){
 		deleteTables()
 		fetch('controllers/AJAX/getTopSalesProducts.php').then(response => response.json())
 		.then(data => {
-		createTable(data, "3");
-
+			createTable(data, "3");
+			download_table_as_csv("3");
 		});
 	}
 
 	function stockOrderList(){
-		console.log("d");
+		deleteTables();
+		fetch('controllers/AJAX/getStockOrderList.php').then(response => response.json())
+		.then(data => {
+			createTable(data, "4");
+			download_table_as_csv("4");
+		});
 	}
 
 	function deleteTables(){
@@ -111,11 +124,10 @@ session_start();
 
 	function createTable(json, tableId){
 		var table = document.createElement("TABLE");
+		table.setAttribute('id', 'table' + tableId)
 
 		//Get the count of columns.
 		var columnCount = Object.keys(json[0]).length;
-
-		console.log(Object.keys(json[3]))
 
 		//Add the header row.
 		var row = table.insertRow(-1);
@@ -126,7 +138,7 @@ session_start();
 		}
 
 		//Add the data rows.
-		for (var i = 1; i < json.length; i++) {
+		for (var i = 0; i < json.length; i++) {
 			row = table.insertRow(-1);
 			for (var j = 0; j < columnCount; j++) {
 				var cell = row.insertCell(-1);
@@ -138,5 +150,40 @@ session_start();
 		dvTable.innerHTML = "";
 		dvTable.appendChild(table);
 	}
+
+// Quick and simple export target #table_id into a csv
+function download_table_as_csv(table_id, separator = ',') {
+    // Select rows from table_id
+	var rows = document.getElementById("table" + table_id).rows
+
+	console.log(rows)
+    // Construct csv
+    var csv = [];
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        for (var j = 0; j < cols.length; j++) {
+            // Clean innertext to remove multiple spaces and jumpline (break csv)
+            var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ')
+            // Escape double-quote with double-double-quote (see https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv)
+            data = data.replace(/"/g, '""');
+            // Push escaped string
+            row.push('"' + data + '"');
+        }
+        csv.push(row.join(separator));
+    }
+    var csv_string = csv.join('\n');
+    // Download it
+    var filename = 'export_' + table_id + '_' + new Date().toLocaleDateString() + '.csv';
+    var link = document.createElement('a');
+    //link.style.display = 'none';
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv_string));
+    link.setAttribute('download', filename);
+	link.setAttribute("id", "dwnbtn")
+	link.innerHTML = "Download Report"
+	var dlink = document.querySelector("table");
+    dlink.appendChild(link);
+}
+
 </script>
 </html>
