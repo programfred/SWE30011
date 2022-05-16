@@ -37,6 +37,8 @@ if ($conn->query($sql) === TRUE) {
     //    } else {
     //     $tmpSql .= "({$last_id}, {$x}, {$_POST[$x]});";
     //    }
+
+
     }
     $tmpSql = substr($tmpSql, 0, -1);
     $tmpSql .= ";";
@@ -47,8 +49,20 @@ if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+
+    // success
+    echo "<script>
+    window.location.href='../index.php';
+    alert('New sales record created!');
+    </script>";
+
 }else{
     echo $conn->error;
+
+    echo "<script>
+    window.location.href='../index.php';
+    alert('error editing a member!').conn->error;
+    </script>";
 }
 
 // close DB connection

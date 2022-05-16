@@ -36,12 +36,20 @@ $result = $conn->query($insertMemberQuery);
 // check if inserted successfully
 if (!$result)
 {
-    echo "insertion in member table failed!" . $conn->error;
+    
+    echo "<script>
+    window.location.href='../index.php';
+    alert('error creating a member!').conn->error;
+    </script>";
+
 }
 else
 {
     // success
-    echo "successfully inserted new member";
+    echo "<script>
+    window.location.href='../index.php';
+    alert('New Member Created!');
+    </script>";
 }
 
 // close DB connection
